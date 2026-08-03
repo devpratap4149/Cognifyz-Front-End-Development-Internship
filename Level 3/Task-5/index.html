@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Directory | API Integration</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>User Directory</h1>
+
+            <p>
+                User data loaded dynamically using the
+                JSONPlaceholder API
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="controls">
+            <button type="button" id="loadUsersButton">
+                Load Users
+            </button>
+
+            <button
+                type="button"
+                id="clearUsersButton"
+                class="secondary-button"
+            >
+                Clear Users
+            </button>
+        </section>
+
+        <p id="statusMessage" class="status-message">
+            Click “Load Users” to fetch data.
+        </p>
+
+        <section id="userContainer" class="user-grid">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Cognifyz Technologies Front-End Development Internship
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

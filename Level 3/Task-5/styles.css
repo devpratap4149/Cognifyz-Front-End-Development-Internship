@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #dbeafe;
+    font-size: 17px;
+}
+
+main {
+    flex: 1;
+    padding: 35px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.secondary-button {
+    background-color: #475569;
+}
+
+.secondary-button:hover {
+    background-color: #334155;
+}
+
+.status-message {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #475569;
+    font-weight: bold;
+}
+
+.user-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.user-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    border-top: 5px solid #2563eb;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-card h2 {
+    color: #172554;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.user-card p {
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.user-card a {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #b91c1c;
+}
+
+.success-message {
+    color: #15803d;
+}
+
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .user-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .user-grid {
+        grid-template-columns: 1fr;
+    }
+}
