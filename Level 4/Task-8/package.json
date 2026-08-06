@@ -1,0 +1,17 @@
+{
+  "name": "task-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+  "sass": "sass styles.scss styles.css",
+  "sass:watch": "sass --watch styles.scss:styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.102.0"
+  }
+}

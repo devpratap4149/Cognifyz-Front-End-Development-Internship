@@ -1,0 +1,1060 @@
+// // -----------------------------
+// // Variables
+// // -----------------------------
+
+// $primary-color: #2563eb;
+// $primary-dark: #1d4ed8;
+// $navy-dark: #0f172a;
+// $navy-medium: #172554;
+// $navy-light: #1e3a8a;
+
+// $text-dark: #1e293b;
+// $text-light: #f8fafc;
+// $text-muted: #cbd5e1;
+
+// $white: #ffffff;
+// $light-background: #f8fafc;
+// $section-background: #f1f5f9;
+
+// $success-color: #198754;
+// $error-color: #dc3545;
+
+// $border-radius-small: 8px;
+// $border-radius-medium: 14px;
+// $border-radius-large: 50%;
+
+// $section-spacing: 90px;
+// $transition-speed: 0.25s;
+
+
+// // -----------------------------
+// // Mixins
+// // -----------------------------
+
+// @mixin flex-center {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// @mixin card-shadow {
+//     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+// }
+
+// @mixin hover-lift {
+//     transition:
+//         transform $transition-speed ease,
+//         box-shadow $transition-speed ease;
+
+//     &:hover {
+//         transform: translateY(-6px);
+//         box-shadow: 0 16px 35px rgba(15, 23, 42, 0.16);
+//     }
+// }
+
+// @mixin gradient-background {
+//     background:
+//         linear-gradient(
+//             135deg,
+//             $navy-dark,
+//             $navy-medium,
+//             $navy-light
+//         );
+// }
+
+
+// // -----------------------------
+// // Base styles
+// // -----------------------------
+
+// html {
+//     scroll-behavior: smooth;
+//     scroll-padding-top: 75px;
+// }
+
+// body {
+//     font-family: Arial, sans-serif;
+//     color: $text-dark;
+//     background-color: $light-background;
+// }
+
+// .section-padding {
+//     padding: $section-spacing 0;
+// }
+
+
+// // -----------------------------
+// // Navbar
+// // -----------------------------
+
+// .navbar {
+//     .navbar-brand {
+//         letter-spacing: 0.5px;
+//     }
+
+//     .nav-link {
+//         color: rgba($white, 0.8);
+//         font-weight: 600;
+//         margin-left: 8px;
+//         transition: color $transition-speed ease;
+
+//         &:hover,
+//         &:focus {
+//             color: $white;
+//         }
+//     }
+// }
+
+
+// // -----------------------------
+// // Hero section
+// // -----------------------------
+
+// .hero-section {
+//     @include gradient-background;
+
+//     .badge {
+//         font-size: 14px;
+//         letter-spacing: 0.4px;
+//     }
+
+//     h1 {
+//         line-height: 1.15;
+//     }
+
+//     .lead {
+//         max-width: 720px;
+//     }
+
+//     .btn {
+//         border-radius: $border-radius-small;
+//         font-weight: 600;
+//     }
+// }
+
+// .profile-image {
+//     width: 320px;
+//     height: 320px;
+//     object-fit: cover;
+//     border-radius: $border-radius-large;
+//     border: 8px solid rgba($white, 0.18);
+//     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+// }
+
+
+// // -----------------------------
+// // Section headings
+// // -----------------------------
+
+// .section-heading {
+//     p {
+//         color: $primary-color;
+//         font-weight: bold;
+//         text-transform: uppercase;
+//         letter-spacing: 1.5px;
+//     }
+
+//     h2 {
+//         color: $navy-dark;
+//     }
+// }
+
+
+// // -----------------------------
+// // About section
+// // -----------------------------
+
+// #about {
+//     .card {
+//         border-left: 5px solid $primary-color;
+//         border-radius: $border-radius-medium;
+
+//         @include card-shadow;
+//     }
+// }
+
+
+// // -----------------------------
+// // Skill cards
+// // -----------------------------
+
+// .skill-card {
+//     border-bottom: 4px solid $primary-color !important;
+//     border-radius: $border-radius-small;
+
+//     @include hover-lift;
+
+//     .card-body {
+//         padding: 24px 15px;
+//     }
+
+//     h3 {
+//         color: $navy-medium;
+//         font-weight: bold;
+//     }
+// }
+
+
+// // -----------------------------
+// // Project cards
+// // -----------------------------
+
+// .project-card {
+//     border-radius: $border-radius-medium;
+
+//     @include hover-lift;
+
+//     .card-title {
+//         color: $navy-medium;
+//         font-weight: bold;
+//     }
+
+//     .card-text {
+//         color: #475569;
+//     }
+
+//     .btn {
+//         background-color: $primary-color;
+//         border-color: $primary-color;
+//         font-weight: 600;
+
+//         &:hover {
+//             background-color: $primary-dark;
+//             border-color: $primary-dark;
+//         }
+//     }
+// }
+
+
+// // -----------------------------
+// // Contact section
+// // -----------------------------
+
+// .contact-info {
+//     background:
+//         linear-gradient(
+//             145deg,
+//             $navy-medium,
+//             $navy-light
+//         );
+
+//     border-radius: $border-radius-medium;
+
+//     a {
+//         color: $white;
+
+//         &:hover {
+//             color: #bfdbfe;
+//         }
+//     }
+// }
+
+// #contactForm {
+//     border-radius: $border-radius-medium;
+
+//     @include card-shadow;
+
+//     .form-label {
+//         color: #334155;
+//         font-weight: 600;
+//     }
+
+//     .form-control {
+//         border-radius: $border-radius-small;
+//         padding: 12px 14px;
+
+//         &:focus {
+//             border-color: $primary-color;
+//             box-shadow:
+//                 0 0 0 0.2rem rgba($primary-color, 0.18);
+//         }
+
+//         &.is-valid {
+//             border-color: $success-color;
+//         }
+
+//         &.is-invalid {
+//             border-color: $error-color;
+//         }
+//     }
+
+//     textarea {
+//         resize: vertical;
+//         min-height: 150px;
+//     }
+
+//     .btn-primary {
+//         background-color: $primary-color;
+//         border-color: $primary-color;
+//         font-weight: bold;
+
+//         &:hover {
+//             background-color: $primary-dark;
+//             border-color: $primary-dark;
+//         }
+//     }
+
+//     .alert-success {
+//         border-radius: $border-radius-small;
+//     }
+// }
+
+
+// // -----------------------------
+// // Footer
+// // -----------------------------
+
+// footer {
+//     background-color: $navy-dark;
+
+//     p {
+//         color: $white;
+//     }
+// }
+
+
+// // -----------------------------
+// // Responsive styles
+// // -----------------------------
+
+// @media screen and (max-width: 991px) {
+//     .hero-section {
+//         text-align: center;
+
+//         .lead {
+//             margin-left: auto;
+//             margin-right: auto;
+//         }
+//     }
+
+//     .profile-image {
+//         width: 270px;
+//         height: 270px;
+//     }
+// }
+
+// @media screen and (max-width: 767px) {
+//     $mobile-section-spacing: 65px;
+
+//     .section-padding {
+//         padding: $mobile-section-spacing 0;
+//     }
+
+//     .profile-image {
+//         width: 225px;
+//         height: 225px;
+//     }
+
+//     .hero-section {
+//         h1 {
+//             font-size: 40px;
+//         }
+
+//         .btn {
+//             display: block;
+//             width: 100%;
+//             margin: 10px 0 !important;
+//         }
+//     }
+
+//     .contact-info,
+//     #contactForm {
+//         padding: 24px !important;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =====================================
+// VARIABLES
+// =====================================
+
+$primary: #2563eb;
+$primary-dark: #1d4ed8;
+$primary-light: #60a5fa;
+
+$secondary: #8b5cf6;
+
+$navy-dark: #0f172a;
+$navy-medium: #172554;
+$navy-light: #1e3a8a;
+
+$text-dark: #1e293b;
+$text-medium: #475569;
+$text-light: #cbd5e1;
+
+$white: #ffffff;
+$light-bg: #f8fafc;
+$section-bg: #f1f5f9;
+
+$success: #198754;
+$error: #dc3545;
+
+$small-radius: 8px;
+$medium-radius: 16px;
+$large-radius: 30px;
+
+$section-padding: 90px;
+$transition: 0.3s;
+
+
+// =====================================
+// MIXINS
+// =====================================
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin main-gradient {
+    background:
+        linear-gradient(
+            135deg,
+            $navy-dark,
+            $navy-medium,
+            $navy-light
+        );
+}
+
+@mixin card-shadow {
+    box-shadow:
+        0 12px 32px rgba(15, 23, 42, 0.1);
+}
+
+@mixin hover-lift {
+    transition:
+        transform $transition ease,
+        box-shadow $transition ease;
+
+    &:hover {
+        transform: translateY(-7px);
+
+        box-shadow:
+            0 18px 40px rgba(15, 23, 42, 0.16);
+    }
+}
+
+@mixin liquid-glass {
+    border: 1px solid rgba($white, 0.7);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba($white, 0.68),
+            rgba($white, 0.28)
+        );
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 25px 65px rgba(15, 23, 42, 0.14),
+        inset 0 1px 1px rgba($white, 0.95);
+}
+
+
+// =====================================
+// GENERAL STYLES
+// =====================================
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: $text-dark;
+    background-color: $light-bg;
+}
+
+.section-padding {
+    padding: $section-padding 0;
+}
+
+
+// =====================================
+// NAVBAR
+// =====================================
+
+.navbar {
+    .navbar-brand {
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-link {
+        color: rgba($white, 0.8);
+        font-weight: 600;
+        margin-left: 8px;
+
+        transition: color $transition ease;
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+}
+
+
+// =====================================
+// HERO SECTION
+// =====================================
+
+.hero-section {
+    @include main-gradient;
+
+    .badge {
+        font-size: 14px;
+        letter-spacing: 0.4px;
+    }
+
+    h1 {
+        line-height: 1.15;
+    }
+
+    .lead {
+        max-width: 720px;
+    }
+
+    .btn {
+        border-radius: $small-radius;
+        font-weight: 600;
+    }
+}
+
+.profile-image {
+    width: 320px;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 8px solid rgba($white, 0.18);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+// =====================================
+// ABOUT SECTION
+// =====================================
+
+#about {
+    .card {
+        border-left: 5px solid $primary;
+        border-radius: $medium-radius;
+
+        @include card-shadow;
+    }
+}
+
+
+// =====================================
+// LIQUID GLASS SKILLS SECTION
+// =====================================
+
+.skills-section {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba($primary, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba($secondary, 0.15),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #f8fafc,
+            #f2f4ff
+        );
+}
+
+.skills-liquid-container {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    padding: 65px 55px;
+
+    border-radius: $large-radius;
+
+    @include liquid-glass;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        background:
+            linear-gradient(
+                120deg,
+                transparent 20%,
+                rgba($white, 0.5) 45%,
+                transparent 70%
+            );
+
+        transform: translateX(-120%);
+
+        animation:
+            liquid-shimmer 7s linear infinite;
+    }
+}
+
+.skills-heading {
+    position: relative;
+    z-index: 2;
+
+    p {
+        color: $primary !important;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+    }
+
+    h2 {
+        color: $navy-dark;
+        font-size: 52px;
+    }
+}
+
+.skills-grid {
+    position: relative;
+    z-index: 2;
+}
+
+.skill-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 135px;
+
+    @include flex-center;
+
+    padding: 24px;
+
+    border: 1px solid rgba($white, 0.82);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba($white, 0.82),
+            rgba($white, 0.36)
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 12px 30px rgba(30, 64, 175, 0.12),
+        inset 0 1px 1px rgba($white, 0.95),
+        inset 0 -4px 10px rgba($primary, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        bottom: 0;
+
+        height: 5px;
+
+        border-radius: 10px 10px 0 0;
+
+        background:
+            linear-gradient(
+                90deg,
+                $primary,
+                $primary-light,
+                $secondary
+            );
+
+        box-shadow:
+            0 -3px 14px rgba($primary, 0.45);
+    }
+
+    h3 {
+        position: relative;
+        z-index: 2;
+
+        margin: 0;
+
+        color: $navy-medium;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    &:hover {
+        transform:
+            translateY(-10px)
+            scale(1.025);
+
+        border-color:
+            rgba($primary-light, 0.8);
+
+        box-shadow:
+            0 24px 48px rgba($primary, 0.2),
+            inset 0 1px 1px rgba($white, 1);
+    }
+
+    &:hover {
+        .skill-shine {
+            transform:
+                translateX(250%)
+                rotate(20deg);
+        }
+    }
+}
+
+.skill-shine {
+    position: absolute;
+    top: -50%;
+    left: -75%;
+
+    width: 45%;
+    height: 220%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba($white, 0.8),
+            transparent
+        );
+
+    transform: rotate(20deg);
+
+    transition:
+        transform 0.75s ease;
+}
+
+.liquid-blob {
+    position: absolute;
+    z-index: -1;
+
+    border-radius: 50%;
+
+    filter: blur(6px);
+    opacity: 0.65;
+
+    animation:
+        liquid-float 7s ease-in-out infinite;
+}
+
+.liquid-blob-one {
+    top: -110px;
+    left: -90px;
+
+    width: 280px;
+    height: 280px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba($primary, 0.75),
+            rgba($primary-light, 0.3)
+        );
+}
+
+.liquid-blob-two {
+    right: -100px;
+    bottom: -120px;
+
+    width: 330px;
+    height: 330px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba($secondary, 0.55),
+            rgba($primary-light, 0.42)
+        );
+
+    animation-delay: -3s;
+}
+
+
+// =====================================
+// PROJECT SECTION
+// =====================================
+
+.project-card {
+    border-radius: $medium-radius;
+
+    @include hover-lift;
+
+    .card-title {
+        color: $navy-medium;
+        font-weight: bold;
+    }
+
+    .card-text {
+        color: $text-medium;
+    }
+
+    .btn {
+        background-color: $primary;
+        border-color: $primary;
+        font-weight: 600;
+
+        &:hover {
+            background-color: $primary-dark;
+            border-color: $primary-dark;
+        }
+    }
+}
+
+
+// =====================================
+// CONTACT SECTION
+// =====================================
+
+.contact-info {
+    background:
+        linear-gradient(
+            145deg,
+            $navy-medium,
+            $navy-light
+        );
+
+    border-radius: $medium-radius;
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: #bfdbfe;
+        }
+    }
+}
+
+#contactForm {
+    border-radius: $medium-radius;
+
+    @include card-shadow;
+
+    .form-label {
+        color: #334155;
+        font-weight: 600;
+    }
+
+    .form-control {
+        padding: 12px 14px;
+
+        border-radius: $small-radius;
+
+        &:focus {
+            border-color: $primary;
+
+            box-shadow:
+                0 0 0 0.2rem rgba($primary, 0.18);
+        }
+
+        &.is-valid {
+            border-color: $success;
+        }
+
+        &.is-invalid {
+            border-color: $error;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 150px;
+    }
+
+    .btn-primary {
+        background-color: $primary;
+        border-color: $primary;
+        font-weight: bold;
+
+        &:hover {
+            background-color: $primary-dark;
+            border-color: $primary-dark;
+        }
+    }
+
+    .alert-success {
+        border-radius: $small-radius;
+    }
+}
+
+
+// =====================================
+// FOOTER
+// =====================================
+
+footer {
+    background-color: $navy-dark;
+
+    p {
+        color: $white;
+    }
+}
+
+
+// =====================================
+// ANIMATIONS
+// =====================================
+
+@keyframes liquid-float {
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(25px, -22px, 0)
+            scale(1.08);
+    }
+}
+
+@keyframes liquid-shimmer {
+    0% {
+        transform: translateX(-120%);
+    }
+
+    55%,
+    100% {
+        transform: translateX(120%);
+    }
+}
+
+
+// =====================================
+// TABLET RESPONSIVE DESIGN
+// =====================================
+
+@media screen and (max-width: 991px) {
+    .hero-section {
+        text-align: center;
+
+        .lead {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .profile-image {
+        width: 270px;
+        height: 270px;
+    }
+
+    .skills-liquid-container {
+        padding: 55px 35px;
+    }
+}
+
+
+// =====================================
+// MOBILE RESPONSIVE DESIGN
+// =====================================
+
+@media screen and (max-width: 767px) {
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .profile-image {
+        width: 225px;
+        height: 225px;
+    }
+
+    .hero-section {
+        h1 {
+            font-size: 40px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 10px 0 !important;
+        }
+    }
+
+    .skills-liquid-container {
+        padding: 45px 18px;
+        border-radius: 24px;
+    }
+
+    .skills-heading {
+        h2 {
+            font-size: 38px;
+        }
+    }
+
+    .skill-card {
+        min-height: 110px;
+        padding: 18px 10px;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .contact-info,
+    #contactForm {
+        padding: 24px !important;
+    }
+}
+
+
+// =====================================
+// SMALL PHONE RESPONSIVE DESIGN
+// =====================================
+
+@media screen and (max-width: 480px) {
+    .skills-grid {
+        > div {
+            width: 100%;
+        }
+    }
+
+    .skill-card {
+        min-height: 100px;
+    }
+}
